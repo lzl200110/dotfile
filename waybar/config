@@ -40,7 +40,6 @@
 
 },
 
-
     "clock": {
         "interval": 1,
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -75,27 +74,25 @@
         },
         "format": "{icon}  {capacity}%",
         "tooltip": false,
-        "format-charging": "⚡ {capacity}%",
-        "format-plugged": "⚡ {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{icon}  {time}",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-
         "format-wifi": " ",
         "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "tooltip": false,
         "format-linked": "{ifname} (No IP)  ",
-        "format-disconnected": "⚠ Disconnected ",
-        "on-click": "alacritty nm-connection-editor"
+        "format-disconnected": "⚠ Disconnected "
     },
     "pulseaudio": {
         "scroll-step": 1, 
         "format": "{icon} {volume}% {format_source}",
-        "format-bluetooth": "{icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "{icon}  {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "{icon}  {format_source}",
+        "format-bluetooth": " {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "{icon}  {format_source}",
         "format-source": " {volume}%",
         "format-source-muted": " ",
         "format-icons": {

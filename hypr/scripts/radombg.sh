@@ -3,5 +3,12 @@
 #
 
 filename1=$(ls ~/Pictures/wallpaper | shuf | head -n 1)
-swww img ~/Pictures/wallpaper/${filename1} --transition-type random --transition-step 2  --transition-fps 60 --transition-bezier 1,1,1,1
+hyprctl hyprpaper preload "~/Pictures/wallpaper/${filename1}"
+if [ "$(hyprctl activeworkspace -j | jq -r ".monitorID")" = "1" ]; then
+    hyprctl hyprpaper wallpaper "DP-1,~/Pictures/wallpaper/${filename1}"
+else
+    hyprctl hyprpaper wallpaper "eDP-1,~/Pictures/wallpaper/${filename1}"
+fi
+hyprctl hyprpaper unload all
+
 
